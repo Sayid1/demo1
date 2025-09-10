@@ -1,0 +1,41 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "@/libs/uview-ui/components/u-$1/u-$1.vue"
+    }
+  },
+  "globalStyle": {
+    "rpxCalcMaxDeviceWidth": 1960,
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "小蚁小程序模板",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "营养自测",
+        "navigationStyle": "custom"
+      },
+      "name": "index"
+    },
+    {
+      "path": "pages/tabbar/tabbar",
+      "style": {
+        "navigationBarTitleText": "营养自测",
+        "navigationStyle": "custom"
+      },
+      "name": "tabbar"
+    },
+    {
+      "path": "pages/test/test",
+      "style": {
+        "navigationBarTitleText": "营养自测",
+        "navigationStyle": "custom"
+      },
+      "name": "test"
+    }
+  ]
+}

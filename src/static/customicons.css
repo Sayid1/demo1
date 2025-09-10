@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'DIN-Medium';
+    src: url('/static/DIN-Medium.otf') format('opentype'); /* OTF 格式 */
+    font-weight: 500; /* Medium 对应 500 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DIN-Bold';
+    src: url('/static/DIN-Bold.otf') format('opentype'); /* OTF 格式 */
+    font-weight: 700; /* Bold 对应 700 */
+    font-style: normal;
+}
+.DIN-Medium {
+    font-family: 'DIN-Medium', sans-serif;
+}
+.DIN-Bold {
+    font-family: 'DIN-Bold', sans-serif;
+}
