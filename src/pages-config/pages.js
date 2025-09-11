@@ -2,7 +2,7 @@ module.exports = [
   {
     path: "pages/index/index",
     style: {
-      navigationBarTitleText: "营养自测",
+      navigationBarTitleText: "营养自测1",
       navigationStyle: "custom",
     },
     name: "index",
