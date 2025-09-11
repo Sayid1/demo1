@@ -1,6 +1,6 @@
 import '@/libs/prototype/uni'
 import App from './App'
-// import store from "./store";
+import store from './store'
 import Vue from 'vue'
 import uView from '@/mixins/uview'
 // import uView from 'uview-ui'
@@ -78,11 +78,11 @@ Vue.prototype.prohibitNegative = function (value, decimal = -1, maxLength = 255)
 	return value
 }
 Vue.config.productionTip = false
-// Vue.prototype.$store = store;
+Vue.prototype.$store = store
 App.mpType = 'app'
 // store.dispatch("tabbar/getTabbarList");
 const app = new Vue({
-	// store,
+	store,
 	...App
 })
 app.$mount()

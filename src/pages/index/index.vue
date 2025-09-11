@@ -3,7 +3,8 @@
 		class="page"
 		:customStyle="{
 			padding: '0 24rpx',
-			paddingTop: '24rpx'
+			paddingTop: '24rpx',
+			paddingBottom: '48rpx'
 		}"
 	>
 		<view slot="header" class="u-flex">
@@ -182,8 +183,8 @@
 				class="u-flex-col u-col-center u-row-center"
 				style="
 					background-color: #5fb0bf;
-					width: calc(33.3% - 10rpx);
-					margin-right: 15rpx;
+					width: calc(33.333% - 10rpx);
+					margin-right: 13rpx;
 					border-radius: 6rpx;
 					height: 138rpx;
 				"
@@ -195,8 +196,8 @@
 				class="u-flex-col u-col-center u-row-center"
 				style="
 					background-color: #5fb0bf;
-					width: calc(33.3% - 10rpx);
-					margin-right: 15rpx;
+					width: calc(33.333% - 10rpx);
+					margin-right: 13rpx;
 					border-radius: 6rpx;
 					height: 138rpx;
 				"
@@ -208,7 +209,7 @@
 				class="u-flex-col u-col-center u-row-center"
 				style="
 					background-color: #5fb0bf;
-					width: calc(33.3% - 10rpx);
+					width: calc(33.333% - 10rpx);
 					border-radius: 6rpx;
 					height: 138rpx;
 				"
@@ -321,39 +322,62 @@
 				"
 			></view>
 		</view>
-
-		<u-tabs
-			:list="list1"
-			@click="onChangeTab"
-			:scrollable="false"
-			lineColor="#4995a4"
-			lineWidth="36"
-		></u-tabs>
-		<view style="color: #4995a4; margin-top: 12rpx">
-			<text
-				style="
-					background-color: #efddde;
-					padding: 4rpx;
-					margin-right: 10rpx;
-					font-size: 24rpx;
-					color: #921d22;
-				"
-			>
-				置顶
-			</text>
-			<text
-				style="
-					background-color: #efddde;
-					padding: 4rpx;
-					margin-right: 10rpx;
-					font-size: 24rpx;
-					color: #921d22;
-				"
-			>
-				推荐性标准
-			</text>
-			《家庭养老床位服务基本规范》
+		<!-- <u-sticky customNavHeight="91px" offset-top="200"> -->
+		<view
+			:style="{
+				borderBottom: '1px solid #ccc',
+				position: 'sticky',
+				top: naviBarHeight + 'px',
+				background: '#fff'
+			}"
+		>
+			<u-tabs
+				:list="list1"
+				@click="onChangeTab"
+				:scrollable="false"
+				lineColor="#4995a4"
+				lineWidth="36"
+			></u-tabs>
 		</view>
+		<view
+			style="
+				color: #4995a4;
+				margin-top: 12rpx;
+				border-bottom: 1px solid #f7efef;
+				padding: 6rpx 0 12rpx 0;
+				background-color: #fff;
+			"
+			v-for="item in 17"
+			:key="item.id"
+		>
+			<view>
+				<text
+					style="
+						background-color: #efddde;
+						padding: 4rpx;
+						margin-right: 10rpx;
+						font-size: 24rpx;
+						color: #921d22;
+					"
+				>
+					置顶
+				</text>
+				<text
+					style="
+						background-color: #efddde;
+						padding: 4rpx;
+						margin-right: 10rpx;
+						font-size: 24rpx;
+						color: #921d22;
+					"
+				>
+					推荐性标准
+				</text>
+				<text>《家庭养老床位服务基本规范》</text>
+			</view>
+			<view style="color: #999; font-size: 24rpx; margin-top: 12rpx">2024-12-26</view>
+		</view>
+
 		<m-tabbar fill fixed safeBottom :current="current" :tabbar="tabbar2" tabbarHeight="140">
 			<template v-slot:tabbar_index_1>
 				<view class="custom_style">
@@ -373,6 +397,7 @@
 export default {
 	data() {
 		return {
+			naviBarHeight: 0,
 			list1: [
 				{
 					name: '咨询'
@@ -402,19 +427,19 @@ export default {
 				backgroundColor: '#fff',
 				list: [
 					{
-						pagePath: 'pages/tabbar/tabbar',
+						pagePath: 'pages/index/index',
 						text: '服务',
 						selectedIconPath: 'https://dummyimage.com/40x40/0baccf/fff.png',
 						iconPath: 'https://dummyimage.com/40x40/0baccf/fff.png'
 					},
 					{
-						pagePath: 'pages/test/index',
+						pagePath: 'pages/index/index',
 						text: '解决方案',
 						selectedIconPath: 'https://dummyimage.com/40x40/0baccf/fff.png',
 						iconPath: 'https://dummyimage.com/40x40/0baccf/fff.png'
 					},
 					{
-						pagePath: 'pages/test/index',
+						pagePath: 'pages/index/index',
 						text: '我的',
 						selectedIconPath: 'https://dummyimage.com/40x40/0baccf/fff.png',
 						iconPath: 'https://dummyimage.com/40x40/0baccf/fff.png'
@@ -423,7 +448,12 @@ export default {
 			}
 		}
 	},
-	onLoad() {},
+	onLoad() {
+		const res = uni.getSystemInfoSync()
+		const system = res.platform
+		this.naviBarHeight = 44 + res.statusBarHeight
+		console.log('this.naviBarHeight', this.naviBarHeight)
+	},
 	methods: {
 		onChangeTab() {},
 		onClick(index) {
