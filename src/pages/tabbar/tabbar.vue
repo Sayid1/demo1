@@ -88,7 +88,7 @@
 			</view>
 		</view>
 		<view
-			class="u-flex u-flex-col u-row-center"
+			class="u-flex u-flex-col u-row-center u-col-top u-p-l-24"
 			style="
 				background-color: #f3e7e7;
 				color: #912427;
