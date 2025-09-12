@@ -450,9 +450,7 @@ export default {
 	},
 	onLoad() {
 		const res = uni.getSystemInfoSync()
-		const system = res.platform
 		this.naviBarHeight = 44 + res.statusBarHeight
-		console.log('this.naviBarHeight', this.naviBarHeight)
 	},
 	methods: {
 		onChangeTab() {},
