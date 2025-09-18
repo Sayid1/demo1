@@ -2,7 +2,12 @@
 	<view
 		class="u-image"
 		@tap="onClick"
-		:style="[wrapStyle, backgroundStyle, { display: inline ? 'inline-block' : 'block' }]"
+		:style="[
+			wrapStyle,
+			backgroundStyle,
+			{ display: inline ? 'inline-block' : 'block' },
+			$u.addStyle(customStyle)
+		]"
 	>
 		<template v-if="src">
 			<image
