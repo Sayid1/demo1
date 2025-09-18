@@ -2,14 +2,14 @@ import { getParentPageSync } from '@/libs/utils/page'
 
 export default {
 	onShow() {
-		this.$store.dispatch('page/setPageOnShow', true)
+		//this.$store.dispatch('page/setPageOnShow', true)
 	},
 	onHide() {
-		this.$store.dispatch('page/setPageOnShow', false)
+		//this.$store.dispatch('page/setPageOnShow', false)
 	},
 	computed: {
 		PAGE_ON_SHOW() {
-			return this.$store.state.page.pageOnShow
+			return 1 //this.$store.state.page.pageOnShow
 		}
 	},
 	methods: {

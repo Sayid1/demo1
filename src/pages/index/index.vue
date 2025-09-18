@@ -34,12 +34,6 @@
 				北京
 				<u-icon name="arrow-down-fill" color="#fff" size="16"></u-icon>
 			</view>
-			<!-- <view
-				class="u-flex u-p-40"
-				style="background-color: #921d21; color: #fff; height: 40px"
-			>
-				搜索
-			</view> -->
 		</view>
 
 		<view
@@ -51,40 +45,16 @@
 			"
 		>
 			<view class="u-flex u-row-between">
-				<view
-					class="u-rela"
-					style="
-						background-color: #dfddf9;
-						width: 338rpx;
-						height: 338rpx;
-						border-radius: 12rpx;
-					"
-				>
-					<ui-image
-						src="/static/images/house-1.png"
-						width="272rpx"
-						height="244rpx"
-						customStyle="bottom: 0; left: 0; z-index: 1;position:absolute;"
-					/>
-					<ui-image
-						src="/static/images/house.png"
-						width="228rpx"
-						height="208rpx"
-						customStyle="bottom: 0; left: 0; z-index: 2;position:absolute;"
-					/>
+				<view>
+					<ui-image src="/static/images/house2.png" width="336rpx" height="336rpx" />
 				</view>
 				<view style="flex: 1; margin-left: 14rpx">
-					<view
-						style="background-color: #dfddf9; height: 166rpx; border-radius: 12rpx"
-					></view>
-					<view
-						style="
-							background-color: #dfddf9;
-							height: 166rpx;
-							margin-top: 14rpx;
-							border-radius: 12rpx;
-						"
-					></view>
+					<view>
+						<ui-image src="/static/images/eat.png" width="336rpx" height="160rpx" />
+					</view>
+					<view style="margin-top: 14rpx">
+						<ui-image src="/static/images/org.png" width="336rpx" height="160rpx" />
+					</view>
 				</view>
 			</view>
 			<view class="u-m-t-24">
@@ -184,6 +154,7 @@
 				<view class="u-flex u-flex-1">
 					<view class="u-flex-1">
 						<view
+							class="u-flex u-flex-col u-row-center"
 							style="
 								background-color: #b1a7f8;
 								height: 160rpx;
@@ -191,18 +162,30 @@
 								width: 100%;
 								border-radius: 12rpx;
 							"
-						></view>
+						>
+							<view>养老床位</view>
+							<view style="margin-top: 24rpx; font-weight: bold; font-size: 40rpx">
+								616个
+							</view>
+						</view>
 						<view
+							class="u-flex u-flex-col u-row-center"
 							style="
 								background-color: #b1a7f8;
 								height: 160rpx;
 								width: 100%;
 								border-radius: 12rpx;
 							"
-						></view>
+						>
+							<view>可预定床位</view>
+							<view style="margin-top: 24rpx; font-weight: bold; font-size: 40rpx">
+								4.3万张
+							</view>
+						</view>
 					</view>
 					<view class="u-flex-1" style="margin-left: 14rpx">
 						<view
+							class="u-flex u-flex-col u-row-center"
 							style="
 								background-color: #b1a7f8;
 								height: 160rpx;
@@ -210,101 +193,169 @@
 								width: 100%;
 								border-radius: 12rpx;
 							"
-						></view>
+						>
+							<view>驿站数量</view>
+							<view style="margin-top: 24rpx; font-weight: bold; font-size: 40rpx">
+								1459个
+							</view>
+						</view>
 						<view
+							class="u-flex u-flex-col u-row-center"
 							style="
 								background-color: #b1a7f8;
 								height: 160rpx;
 								width: 100%;
 								border-radius: 12rpx;
 							"
-						></view>
+						>
+							<view>助餐点数量</view>
+							<view style="margin-top: 24rpx; font-weight: bold; font-size: 40rpx">
+								3151个
+							</view>
+						</view>
 					</view>
 				</view>
 				<view
+					class="u-flex u-flex-col u-row-center"
 					style="
 						width: 170rpx;
 						border-radius: 12rpx;
 						background-color: #b1a7f8;
 						margin-left: 14rpx;
 					"
-				></view>
+				>
+					<view>养老机构</view>
+					<view style="margin-top: 24rpx; font-weight: bold; font-size: 40rpx">
+						11.0
+						<br />
+						万张
+					</view>
+				</view>
 			</view>
 
 			<map style="width: 100%; margin-top: 36rpx" />
 
 			<view class="u-flex u-row-between u-m-t-36">
-				<view
-					style="
-						background-color: #ffeee6;
-						width: 286rpx;
-						height: 252rpx;
-						border-radius: 12rpx;
-					"
-				></view>
-				<view style="width: 394rpx">
+				<view class="u-rela">
 					<view
-						style="background-color: #ffeee6; height: 114rpx; border-radius: 12rpx"
-					></view>
-					<view
+						class="u-abso"
 						style="
-							background-color: #ffeee6;
-							height: 114rpx;
-							margin-top: 24rpx;
-							border-radius: 12rpx;
+							z-index: 1;
+							font-weight: 600;
+							width: 100%;
+							text-align: center;
+							font-size: 44rpx;
+							top: 12rpx;
 						"
-					></view>
+					>
+						机构养老
+						<br />
+						需求注册
+					</view>
+					<view
+						class="u-abso"
+						style="
+							color: #fff;
+							background-color: #314bff;
+							padding: 16rpx 40rpx;
+							z-index: 1;
+							border-radius: 46rpx;
+							bottom: 8rpx;
+							right: 8rpx;
+						"
+					>
+						进入
+					</view>
+					<ui-image src="/static/images/register.png" width="336rpx" height="336rpx" />
 				</view>
-			</view>
-			<view class="u-flex u-row-between u-m-t-24">
-				<view
-					style="
-						background-color: #ffeee6;
-						width: 286rpx;
-						height: 252rpx;
-						border-radius: 12rpx;
-					"
-				></view>
-				<view style="width: 394rpx">
+				<view class="u-rela">
 					<view
-						style="background-color: #ffeee6; height: 114rpx; border-radius: 12rpx"
-					></view>
-					<view
+						class="u-abso"
 						style="
-							background-color: #ffeee6;
-							height: 114rpx;
-							margin-top: 24rpx;
-							border-radius: 12rpx;
+							z-index: 1;
+							font-weight: 600;
+							width: 100%;
+							text-align: center;
+							font-size: 44rpx;
+							top: 12rpx;
 						"
-					></view>
+					>
+						适老化产品
+					</view>
+					<view
+						class="u-abso"
+						style="
+							color: #fff;
+							background-color: #314bff;
+							padding: 16rpx 40rpx;
+							z-index: 1;
+							border-radius: 46rpx;
+							bottom: 8rpx;
+							right: 8rpx;
+						"
+					>
+						进入
+					</view>
+					<ui-image src="/static/images/product.png" width="336rpx" height="336rpx" />
 				</view>
 			</view>
 
-			<view class="u-flex u-flex-wrap u-row-between u-m-t-36">
-				<view
-					style="
-						background-color: #4995a4;
-						width: 286rpx;
-						height: 180rpx;
-						border-radius: 12rpx;
-					"
-				></view>
-				<view
-					style="
-						width: 394rpx;
-						height: 180rpx;
-						background-color: #4995a4;
-						border-radius: 12rpx;
-					"
-				></view>
-				<view
-					style="
-						background-color: #4995a4;
-						width: 100%;
-						height: 182rpx;
-						border-radius: 12rpx;
-					"
-				></view>
+			<view
+				class="u-flex u-row-between u-m-t-24"
+				style="color: #040404; font-weight: bold; font-size: 40rpx"
+			>
+				<view class="u-rela u-flex u-row-center" style="width: 160rpx; height: 160rpx">
+					<ui-image
+						src="/static/images/card.png"
+						customStyle="position:absolute"
+						height="160rpx"
+						width="160rpx"
+					/>
+					<view class="u-rela" style="z-index: 1">
+						养老
+						<br />
+						人才
+					</view>
+				</view>
+				<view class="u-rela u-flex u-row-center" style="width: 160rpx; height: 160rpx">
+					<ui-image
+						src="/static/images/card.png"
+						customStyle="position:absolute"
+						height="160rpx"
+						width="160rpx"
+					/>
+					<view class="u-rela" style="z-index: 1">
+						志愿
+						<br />
+						服务
+					</view>
+				</view>
+				<view class="u-rela u-flex u-row-center" style="width: 160rpx; height: 160rpx">
+					<ui-image
+						src="/static/images/card.png"
+						customStyle="position:absolute"
+						height="160rpx"
+						width="160rpx"
+					/>
+					<view class="u-rela u-text-center" style="z-index: 1">
+						京津冀
+						<br />
+						养老
+					</view>
+				</view>
+				<view class="u-rela u-flex u-row-center" style="width: 160rpx; height: 160rpx">
+					<ui-image
+						src="/static/images/card.png"
+						customStyle="position:absolute"
+						height="160rpx"
+						width="160rpx"
+					/>
+					<view class="u-rela" style="z-index: 1">
+						旅居
+						<br />
+						养老
+					</view>
+				</view>
 			</view>
 			<!-- <u-sticky customNavHeight="91px" offset-top="200"> -->
 			<view

@@ -8,13 +8,12 @@ import {
 import { str2param, param2str } from './url'
 import { isValidURL, isPureObject } from './validate'
 import { routersMap } from './pages-config'
-import store from '@/store'
 import { isInWebView } from './wechat'
 // #ifdef H5
 import weixinJsSdk from 'weixin-js-sdk'
 // #endif
 // key 完整路由 或者路由名称
-export const findRouterInfo = function(key) {
+export const findRouterInfo = function (key) {
 	let item = routersMap[key]
 	if (item) {
 		return item
@@ -38,7 +37,7 @@ export const findRouterInfo = function(key) {
  * @return {Boolean}
  * @author: dubangrong
  */
-export const checkIsHomeRouter = function(key) {
+export const checkIsHomeRouter = function (key) {
 	let item = findRouterInfo(key)
 	return item && item.isHome
 }
@@ -48,7 +47,7 @@ export const checkIsHomeRouter = function(key) {
  * @return {Object}
  * @author: dubangrong
  */
-export const findHomeRouter = function() {
+export const findHomeRouter = function () {
 	for (let p in routersMap) {
 		if (routersMap[p].isHome) {
 			return routersMap[p]
@@ -67,7 +66,7 @@ export const findHomeRouter = function() {
  * }
  * @author: dubangrong
  */
-export const getCurRouter = function() {
+export const getCurRouter = function () {
 	let page = getCurPage()
 	let query = getCurPageQuery()
 
@@ -102,7 +101,7 @@ export const getCurRouter = function() {
  * @return {null}
  * @author: dubangrong
  */
-export const navTo = function(url, opt = {}, type) {
+export const navTo = function (url, opt = {}, type) {
 	let query = ''
 	let root = 'pages'
 
@@ -199,7 +198,7 @@ export const navTo = function(url, opt = {}, type) {
  * @return {Promise}
  * @author: dubangrong
  */
-export const navToH5 = function(url, title) {
+export const navToH5 = function (url, title) {
 	// #ifdef H5
 	return window.open(url, '_blank')
 	// #endif
@@ -216,7 +215,7 @@ export const navToH5 = function(url, title) {
 	// #endif
 }
 // 检测小程序接口是否成功
-export const checkMPApiErrMsg = function(ret, api) {
+export const checkMPApiErrMsg = function (ret, api) {
 	let info = ret
 
 	if (Array.isArray(info)) {
@@ -236,7 +235,7 @@ export const checkMPApiErrMsg = function(ret, api) {
  * @return {*}
  * @author: dubangrong
  */
-export const navToChannelsLive = function(finderUserName) {
+export const navToChannelsLive = function (finderUserName) {
 	return new Promise((resolve, reject) => {
 		uni.getChannelsLiveInfo({
 			finderUserName
@@ -296,7 +295,7 @@ export const navToChannelsLive = function(finderUserName) {
  * }
  * @author: dubangrong
  */
-export const navToChannelsActivity = function({ finderUserName, feedId }) {
+export const navToChannelsActivity = function ({ finderUserName, feedId }) {
 	return new Promise((resolve, reject) => {
 		if (feedId) {
 			uni.openChannelsActivity({
@@ -349,7 +348,7 @@ let throttleNavTo = false
  * @return {Promise}
  * @author: dubangrong
  */
-export const navToMix = function(cfg, opt) {
+export const navToMix = function (cfg, opt) {
 	if (cfg) {
 		let navType = ''
 		if (typeof uni.$ui?.config?.tranformNavConfig === 'function') {
@@ -458,7 +457,7 @@ export const navToMix = function(cfg, opt) {
 	}
 }
 
-export const navBack = function(evt = { delta: 1 }, path, opts, type) {
+export const navBack = function (evt = { delta: 1 }, path, opts, type) {
 	let pages = getCurrentPages()
 	// 如果第一个参数是跳转路径
 	if (typeof evt === 'string') {
@@ -482,7 +481,7 @@ export const navBack = function(evt = { delta: 1 }, path, opts, type) {
  * @return {Boolean}
  * @author: dubangrong
  */
-export const checkShowTabbar = function(route, tabLists) {
+export const checkShowTabbar = function (route, tabLists) {
 	return getTabbarCurrent(route, tabLists) !== -1
 }
 /**
@@ -493,7 +492,7 @@ export const checkShowTabbar = function(route, tabLists) {
  * @author: dubangrong
  */
 export function getTabbarCurrent(route, tabLists) {
-	let tabbarItems = tabLists || store.state.tabbar.lists || []
+	let tabbarItems = tabLists || []
 	// 不传的话使用当前页面
 	if (!route) {
 		const pages = getCurrentPages()

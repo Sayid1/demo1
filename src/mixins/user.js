@@ -8,9 +8,6 @@ function getUserConfig(userInfo, key, defaultKey) {
 }
 export default {
 	computed: {
-		userInfo() {
-			return this.$store.getters.userInfo || {}
-		},
 		// 是否注册
 		isMember() {
 			return getUserConfig(this.userInfo, 'isMember', 'isMember')
