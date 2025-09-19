@@ -34,7 +34,7 @@ page {
 	font-size: 24rpx;
 	&_icon {
 		.circle {
-			background-color: #538d93;
+			background-color: #ff7474;
 			border-radius: 100%;
 			width: 100%;
 			height: 100%;
